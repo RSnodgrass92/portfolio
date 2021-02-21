@@ -1,5 +1,45 @@
-$text-color: red; 
 
-body{
-  color: $text-color;
+.main{
+background: linear-gradient( #4286f4, #373B44); 
+font-size: 1.5em;  
+color: white;
+min-height: 100vh;
+background-color: green;
+}
+
+.projectCard
+{
+    background: white; 
+    color: #373B44; 
+    margin: 10px 5px;
+}
+
+.modal-content{
+    background: #464646!important;
+    color: white;
+}
+
+
+
+#modal-description
+{
+    height: 365px;
+    overflow: auto;
+    font-size: .7em;
+}
+
+
+.modal-header-text
+{
+    font-size: 1.65em;
+    
+    &.modalHeader{
+       &div{
+        padding: 0;
+       }
+    }
+}
+
+.main-img-border{
+    border: white 3px solid;
 }
