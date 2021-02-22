@@ -9,8 +9,7 @@ background-color: green;
 
 .projectCard
 {
-    background: white; 
-    color: #373B44; 
+   
     margin: 10px 5px;
 }
 
@@ -23,7 +22,7 @@ background-color: green;
 
 #modal-description
 {
-    height: 365px;
+    max-height: 400px;
     overflow: auto;
     font-size: .7em;
 }
@@ -42,4 +41,27 @@ background-color: green;
 
 .main-img-border{
     border: white 3px solid;
+}
+
+.modal-video{
+    width: 100%;
+    border: white 1px solid; 
+}
+
+.section-title{
+    font-size: 1.8em;
+}
+
+.cardHover{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.key-tech-modal-font{
+    font-size: 3.5em;
+}
+
+#react-tooltip, #bootstrap-tooltip, #react-redux-tooltip, #react-router-tooltip, #html-tooltip, #sass-tooltip, #javascript-tooltip {
+font-size: .7em;
 }

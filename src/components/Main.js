@@ -1,10 +1,38 @@
 import {ProjectCard} from "./ProjectCard"
 import {useState} from "react"
-import {Modal} from "react-bootstrap"
+import {Modal, Button} from "react-bootstrap"
 import {ModalBodyContent} from "./ModalBodyContent"
-import g from "../assets/test.jpg"
+import ccimg from "../assets/cc.PNG"
+import ftimg from "../assets/ftPNG.PNG"
+import ccvid from "../assets/cc.mkv"
+import {modalFiller} from "./Projects"
 
-const testCase=[<ModalBodyContent description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in augue eleifend ex vestibulum consectetur. Nulla sit amet lectus hendrerit, pellentesque magna tempor, molestie sem. Integer vitae justo lacus. Pellentesque ut risus odio. Donec tincidunt felis eget felis vulputate volutpat. Vestibulum vel lacus dolor. Vestibulum imperdiet, nibh vitae tristique condimentum, augue nisl lacinia massa, id hendrerit enim diam in felis. Nunc massa sapien, dignissim at blandit vitae, iaculis aliquet turpis." />]
+
+const testCase=[<ModalBodyContent videoSrc={ccvid} description={
+
+      <div className="container-fluid">
+        <div className="row">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col p-0">
+                        <strong><h2 className="section-title">Key Technologies Used</h2></strong>
+                    </div>
+                </div>
+                <div className="row">
+                        <strong><h2 className="section-title">Project Summary</h2></strong>
+                </div>
+            </div>
+            
+            <p>This is a website that I made for a local photographer. They primarily wanted their website to serve as a portfolio for their work and get in touch with prospective clients. They already had a website but It was a very generic one that was very much in the need of a facelift.</p>
+        </div>
+        <div className="row my-2">
+            <a href="https://funthoughts.netlify.app/" target="_blank"><button className="btn btn-light col">View Demo</button></a>
+        </div>
+        <div className="row">
+        <a href="https://github.com/" target="_blank"><button className="btn btn-light col">View Code</button></a>
+        </div>
+    </div>
+} />]
 
 
 export function Main(props)
@@ -12,10 +40,10 @@ export function Main(props)
     const [state, setState] = useState({
 
         isModalOpen: false,
-        modalContent: testCase[0], 
+        modalContent: "", 
         modalHeader: "", 
     })
-
+    
     return (
         <>
         <div className="main">
@@ -34,27 +62,19 @@ export function Main(props)
                 </div>
 
                 <div className="row text-center">
+                    
                     <div className="col">
-                         <ProjectCard image={g}/>
+                        <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Fun Thoughts Clothing Co.", modalContent:modalFiller[1]})}><ProjectCard image={ftimg}/></div>
                     </div>
                     <div className="col">
-                         <ProjectCard image={g}/>
-                    </div>
-                </div>
-
-                <div className="row text-center">
-                    <div className="col">
-                         <ProjectCard image={g}/>
-                    </div>
-                    <div className="col">
-                        <div onClick={()=>setState({...state, isModalOpen: true})}><ProjectCard image={g}/></div>
+                        <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Captured Creations Photography", modalContent:modalFiller[0]})}><ProjectCard image={ccimg}/></div>
                     </div>
                 </div>
             </div>
             <button onClick={()=>setState({...state, isModalOpen:true, modalHeader:"testing"})}>this is a test</button>
         </div>
 
-        <Modal show={state.isModalOpen} centered size="lg">
+        <Modal show={state.isModalOpen} centered size="xl">
             <Modal.Header className="modal-header-text">
                 <div className="container text-center">
                     <div className="row">
@@ -62,7 +82,7 @@ export function Main(props)
                             <h2>{state.modalHeader}</h2>
                         </div>
                         <div className="col-2">
-                        <button className="btn btn-light" onClick={()=>setState({...state, isModalOpen: false})}>x</button>
+                        <button className="btn btn-secondary" onClick={()=>setState({...state, isModalOpen: false})}>x</button>
                         </div>
                     </div>
                 </div>
