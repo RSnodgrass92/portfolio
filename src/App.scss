@@ -1,10 +1,11 @@
 
 .main{
-background: linear-gradient( #4286f4, #373B44); 
+// background: linear-gradient( #4286f4, #373B44); 
+background: linear-gradient( rgb(240, 240, 240), #7e7d7d);
+// background:rgb(207, 204, 204);
 font-size: 1.5em;  
-color: white;
+color: #dc3545;
 min-height: 100vh;
-background-color: green;
 }
 
 .projectCard
@@ -60,12 +61,12 @@ background-color: green;
 
 
 .main-img-border{
-    border: white 3px solid;
+    border: #dc3545 3px solid;
 }
 
 .modal-video{
     width: 100%;
-    border: white 1px solid; 
+    border: #dc3545 2px solid; 
 }
 
 .section-title{
@@ -78,9 +79,6 @@ background-color: green;
     }
 }
 
-.key-tech-modal-font{
-    font-size: 3.5em;
-}
 
 a.modal-btn-view.btn
 {
@@ -91,4 +89,26 @@ a.modal-btn-view.btn
 
 #react-tooltip, #bootstrap-tooltip, #react-redux-tooltip, #react-router-tooltip, #html-tooltip, #sass-tooltip, #javascript-tooltip {
 font-size: .7em;
+}
+
+// font size fixers
+
+.modal-header-font-large{
+   font-size: 2.4em;
+}
+
+.modal-header-font-medium{
+    font-size: 2em;
+}
+
+.modal-header-font-small{
+    font-size: 1.25em;
+}
+
+.key-tech-modal-font-large{
+    font-size: 3.5em;
+}
+
+.key-tech-modal-font-small{
+    font-size: 2.2em;
 }

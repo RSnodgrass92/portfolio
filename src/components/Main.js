@@ -47,7 +47,7 @@ export function Main(props)
     return (
         <>
         <div className="main">
-            <div className="container">
+            <div className="container-fluid">
 
                 <div className="row text-center">
                     <div className="col">
@@ -71,17 +71,22 @@ export function Main(props)
                     </div>
                 </div>
             </div>
-            <button onClick={()=>setState({...state, isModalOpen:true, modalHeader:"testing"})}>this is a test</button>
         </div>
 
         <Modal show={state.isModalOpen} centered size="xl">
             <Modal.Header className="modal-header-text" id="modal-head">
                 <div className="container text-center">
                     <div className="row align-items-center">
-                        <div className="col-10">
-                            <h2>{state.modalHeader}</h2>
+                        <div className="col-10 d-none  d-lg-block d-xl-block">
+                            <h2 className="modal-header-font-large">{state.modalHeader}</h2>
                         </div>
-                        <div className="col-2">
+                        <div className="col-10 d-none d-md-block d-lg-none ">
+                            <h2 className="modal-header-font-medium">{state.modalHeader}</h2>
+                        </div>
+                        <div className="col-9 d-md-none d-lg-none d-xl-none">
+                            <h2 className="modal-header-font-small">{state.modalHeader}</h2>
+                        </div>
+                        <div className="col-3 col-md-2">
                         <button className="btn btn-danger" onClick={()=>setState({...state, isModalOpen: false})}>X</button>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import ccvid from "../assets/cc.mkv"
+import ftvid from "../assets/ft.mkv"
 import {ModalBodyContent} from "./ModalBodyContent"
 import {Button} from "react-bootstrap"
 import {FaRegEye, FaCode} from "react-icons/fa"
@@ -43,7 +44,7 @@ new ProjectInfo(ccvid,
       </div>
     ).add()
 
-new ProjectInfo(ccvid,"this is a website I made for a local teeshirt company", "https://github.com/RSnodgrass92/fun-thoughts","https://funthoughts.netlify.app/",
+new ProjectInfo(ftvid,"This was a website that I built for a client that was looking to start their own clothing company. They needed their website to serve as a digital store front for their buisness.", "https://github.com/RSnodgrass92/fun-thoughts","https://funthoughts.netlify.app/",
 
         <div className="container">
             <div className="row text-center">
@@ -72,7 +73,10 @@ export const modalFiller= projectArr.map(index=> <ModalBodyContent videoSrc={ind
                     </div>
                 </div>
                 <div className="row">
-                    <p className="col p-0 key-tech-modal-font">
+                    <p className="col p-0 key-tech-modal-font-large d-none d-md-block d-lg-block d-xl-block">
+                        {index.keyTech}
+                    </p>
+                    <p className="col p-0 key-tech-modal-font-small d-md-none d-lg-none d-xl-none">
                         {index.keyTech}
                     </p>
                 </div>

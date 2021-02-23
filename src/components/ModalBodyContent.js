@@ -9,7 +9,7 @@ export function ModalBodyContent(props)
                     <source src={props.videoSrc} />
                 </video>
                 </div>
-                <div className="col-12 col-xl-4" id="modal-description">{props.description}</div>
+                <div className="col-12 mt-2 col-xl-4 mt-xl-0" id="modal-description">{props.description}</div>
             </div>
         </div>
                
