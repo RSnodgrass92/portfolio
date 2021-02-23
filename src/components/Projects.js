@@ -43,7 +43,7 @@ new ProjectInfo(ccvid,
       </div>
     ).add()
 
-new ProjectInfo(ccvid,"this is a website I made for a local teeshirt company","https://funthoughts.netlify.app/", "https://github.com/RSnodgrass92/fun-thoughts", 
+new ProjectInfo(ccvid,"this is a website I made for a local teeshirt company", "https://github.com/RSnodgrass92/fun-thoughts","https://funthoughts.netlify.app/",
 
         <div className="container">
             <div className="row text-center">
@@ -87,11 +87,11 @@ export const modalFiller= projectArr.map(index=> <ModalBodyContent videoSrc={ind
             
         </div>
         <div className="row my-2 text-center">
-            <div className="col-6 col-xl-12">
-            <Button href={index.demoLink} target="_blank" variant="primary" >View Demo <FaRegEye /></Button>
+            <div className="col-6">
+            <Button href={index.demoLink} target="_blank" variant="danger" className="modal-btn-view" >Demo <FaRegEye /></Button>
             </div>
-            <div className="col-6 col-xl-12">
-            <Button href={index.codeLink} target="_blank" variant="danger">View Code <FaCode /></Button>
+            <div className="col-6">
+            <Button href={index.codeLink} target="_blank" variant="danger" className="modal-btn-view">Code <FaCode /></Button>
             </div>
         </div>
     </div>

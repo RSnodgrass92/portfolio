@@ -13,10 +13,15 @@ background-color: green;
     margin: 10px 5px;
 }
 
+
+
 .modal-content{
+    // background: #033252!important;
     background: #464646!important;
     color: white;
+    
 }
+
 
 
 
@@ -25,19 +30,34 @@ background-color: green;
     max-height: 400px;
     overflow: auto;
     font-size: .7em;
-}
+    &::-webkit-scrollbar{
+        width: auto;
+    }
+    &::-webkit-scrollbar-track{
+        background: rgb(207, 204, 204);
+        border-radius: 25px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #dc3545;
+        border-radius: 25px;
+        &:hover{
+            background: #ba202f;
+        }
+    }
 
-
-.modal-header-text
-{
-    font-size: 1.65em;
-    
-    &.modalHeader{
-       &div{
-        padding: 0;
-       }
+    &::-webkit-scrollbar-button{
+        visibility:hidden;
     }
 }
+
+
+
+#modal-head{
+    padding: 5px;
+    background: rgb(207, 204, 204);
+    color: #dc3545;
+}
+
 
 .main-img-border{
     border: white 3px solid;
@@ -60,6 +80,13 @@ background-color: green;
 
 .key-tech-modal-font{
     font-size: 3.5em;
+}
+
+a.modal-btn-view.btn
+{
+    &.btn-danger{
+        font-size: 1.2em;
+    }
 }
 
 #react-tooltip, #bootstrap-tooltip, #react-redux-tooltip, #react-router-tooltip, #html-tooltip, #sass-tooltip, #javascript-tooltip {

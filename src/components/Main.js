@@ -63,10 +63,10 @@ export function Main(props)
 
                 <div className="row text-center">
                     
-                    <div className="col">
+                    <div className="col-12 col-xl-6">
                         <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Fun Thoughts Clothing Co.", modalContent:modalFiller[1]})}><ProjectCard image={ftimg}/></div>
                     </div>
-                    <div className="col">
+                    <div className="col-12 col-xl-6">
                         <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Captured Creations Photography", modalContent:modalFiller[0]})}><ProjectCard image={ccimg}/></div>
                     </div>
                 </div>
@@ -75,14 +75,14 @@ export function Main(props)
         </div>
 
         <Modal show={state.isModalOpen} centered size="xl">
-            <Modal.Header className="modal-header-text">
+            <Modal.Header className="modal-header-text" id="modal-head">
                 <div className="container text-center">
-                    <div className="row">
+                    <div className="row align-items-center">
                         <div className="col-10">
                             <h2>{state.modalHeader}</h2>
                         </div>
                         <div className="col-2">
-                        <button className="btn btn-secondary" onClick={()=>setState({...state, isModalOpen: false})}>x</button>
+                        <button className="btn btn-danger" onClick={()=>setState({...state, isModalOpen: false})}>X</button>
                         </div>
                     </div>
                 </div>
