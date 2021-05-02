@@ -1,9 +1,10 @@
 import ccvid from "../assets/cc.mkv"
 import ftvid from "../assets/ft.mkv"
+import wdwvid from "../assets/wdw.mkv"
 import {ModalBodyContent} from "./ModalBodyContent"
 import {Button} from "react-bootstrap"
 import {FaRegEye, FaCode} from "react-icons/fa"
-import {SassIcon, BootstrapIcon, HtmlIcon, ReactIcon, ReactReduxIcon, ReactRouterIcon, JavaScriptIcon} from "./TechIcons"
+import {SassIcon, BootstrapIcon, HtmlIcon, ReactIcon, ReactReduxIcon, ReactRouterIcon, JavaScriptIcon, ExpoIcon, ReactNativeIcon} from "./TechIcons"
 
 const projectArr=[];
 
@@ -61,6 +62,31 @@ new ProjectInfo(ftvid,"This was a website that I built for a client that was loo
 
 ).add()
 
+new ProjectInfo(wdwvid,"This is a mobile application that I built with a classmate using React Native. This app was built to serve as a quick reference guide for web developers. The article pages include links to the official documentation for each technology and links to other related Web Dev Wiki articles. Additionally the article pages include links to resources such as GitHub repositories for projects that have implemented the technology and video tutorials", "https://github.com/kweisse1/web-dev-wiki","https://expo.io/@rsnodgra92/projects/webdevwiki",
+        <>
+        <div className="container d-none d-xl-block">
+            <div className="row text-center">
+                <div className="col"><ReactNativeIcon/></div>
+                <div className="col"><JavaScriptIcon/></div>
+                
+            </div>
+            <div className="row text-center">
+                <div className="col"><ReactReduxIcon/></div>
+                <div className="col"><ExpoIcon/></div>
+            </div>
+        </div>
+
+        <div className="container d-xl-none">
+        <div className="row text-center">
+            <div className="col"><ReactNativeIcon/></div>
+            <div className="col"><JavaScriptIcon/></div>
+            <div className="col"><ReactReduxIcon/></div>
+            <div className="col"><ExpoIcon/></div>
+        </div>
+        </div>
+        </>
+).add()
+
 
 export const modalFiller= projectArr.map(index=> <ModalBodyContent videoSrc={index.videoSrc} description={
 
@@ -91,12 +117,13 @@ export const modalFiller= projectArr.map(index=> <ModalBodyContent videoSrc={ind
             
         </div>
         <div className="row my-2 text-center">
-            <div className="col-6">
+            {index.demoLink?  <div className="col-6">
             <Button href={index.demoLink} target="_blank" variant="danger" className="modal-btn-view" >Demo <FaRegEye /></Button>
-            </div>
-            <div className="col-6">
+            </div>: <></>}
+            {index.codeLink?<div className="col-6">
             <Button href={index.codeLink} target="_blank" variant="danger" className="modal-btn-view">Code <FaCode /></Button>
-            </div>
+            </div>:<></>
+            }
         </div>
     </div>
 

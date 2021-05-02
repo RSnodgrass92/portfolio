@@ -18,7 +18,7 @@ min-height: 100vh;
 
 .modal-content{
     // background: #033252!important;
-    background: #464646!important;
+    background: #3b3b3b!important;
     color: white;
     
 }
@@ -94,11 +94,11 @@ font-size: .7em;
 // font size fixers
 
 .modal-header-font-large{
-   font-size: 2.4em;
+   font-size: 1.8em;
 }
 
 .modal-header-font-medium{
-    font-size: 2em;
+    font-size: 1.6em;
 }
 
 .modal-header-font-small{
@@ -111,4 +111,9 @@ font-size: .7em;
 
 .key-tech-modal-font-small{
     font-size: 2.2em;
+}
+.project-card-header-text
+{
+    font-size: 1em;
+    margin-top: 20px;
 }

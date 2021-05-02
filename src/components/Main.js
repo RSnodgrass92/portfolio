@@ -4,35 +4,8 @@ import {Modal, Button} from "react-bootstrap"
 import {ModalBodyContent} from "./ModalBodyContent"
 import ccimg from "../assets/cc.PNG"
 import ftimg from "../assets/ftPNG.PNG"
-import ccvid from "../assets/cc.mkv"
+import wdwimg from "../assets/wdw.PNG"
 import {modalFiller} from "./Projects"
-
-
-const testCase=[<ModalBodyContent videoSrc={ccvid} description={
-
-      <div className="container-fluid">
-        <div className="row">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col p-0">
-                        <strong><h2 className="section-title">Key Technologies Used</h2></strong>
-                    </div>
-                </div>
-                <div className="row">
-                        <strong><h2 className="section-title">Project Summary</h2></strong>
-                </div>
-            </div>
-            
-            <p>This is a website that I made for a local photographer. They primarily wanted their website to serve as a portfolio for their work and get in touch with prospective clients. They already had a website but It was a very generic one that was very much in the need of a facelift.</p>
-        </div>
-        <div className="row my-2">
-            <a href="https://funthoughts.netlify.app/" target="_blank"><button className="btn btn-light col">View Demo</button></a>
-        </div>
-        <div className="row">
-        <a href="https://github.com/" target="_blank"><button className="btn btn-light col">View Code</button></a>
-        </div>
-    </div>
-} />]
 
 
 export function Main(props)
@@ -64,10 +37,16 @@ export function Main(props)
                 <div className="row text-center">
                     
                     <div className="col-12 col-xl-6">
+                        <h2 className="project-card-header-text">Fun Thoughts Clothing Co</h2>
                         <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Fun Thoughts Clothing Co.", modalContent:modalFiller[1]})}><ProjectCard image={ftimg}/></div>
                     </div>
                     <div className="col-12 col-xl-6">
+                        <h2 className="project-card-header-text">Captured Creations Photography</h2>
                         <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Captured Creations Photography", modalContent:modalFiller[0]})}><ProjectCard image={ccimg}/></div>
+                    </div>
+                    <div className="col-12 col-xl-6 offset-xl-3">
+                        <h2 className="project-card-header-text">Web Dev Wiki</h2>
+                        <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Web Dev Wiki", modalContent:modalFiller[2]})}><ProjectCard image={wdwimg}/></div>
                     </div>
                 </div>
             </div>

@@ -5,5 +5,7 @@ import ReactIcon from "./ReactIcon"
 import ReactReduxIcon from "./ReactReduxIcon"
 import ReactRouterIcon from "./ReactRouterIcon"
 import JavaScriptIcon from "./JavaScriptIcon"
+import ExpoIcon from "./ExpoIcon"
+import ReactNativeIcon from "./ReactNativeIcon"
 
-export {SassIcon, BootstrapIcon, HtmlIcon, ReactIcon, ReactReduxIcon, ReactRouterIcon, JavaScriptIcon}; 
+export {SassIcon, BootstrapIcon, HtmlIcon, ReactIcon, ReactReduxIcon, ReactRouterIcon, JavaScriptIcon, ExpoIcon, ReactNativeIcon}; 

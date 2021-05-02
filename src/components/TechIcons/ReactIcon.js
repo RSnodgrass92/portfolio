@@ -12,7 +12,7 @@ function renderTooltip(props) {
   }
 
 
-function BootstrapIcon(props)
+function ReactIcon(props)
 { 
       
           return(
@@ -28,4 +28,4 @@ function BootstrapIcon(props)
 }
 
 
-export default BootstrapIcon
+export default ReactIcon
