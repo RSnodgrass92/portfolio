@@ -6,6 +6,8 @@ import ccimg from "../assets/cc.PNG"
 import ftimg from "../assets/ftPNG.PNG"
 import wdwimg from "../assets/wdw.PNG"
 import {modalFiller} from "./Projects"
+import {FaFilePdf,FaGithub} from "react-icons/fa"
+
 
 
 export function Main(props)
@@ -31,6 +33,15 @@ export function Main(props)
                 <div className="row text-center">
                     <div className="col">
                      Check out my recent work
+                    </div>
+                </div>
+
+                <div classname="row text-center">
+                    <div className="col">
+                    <Button href="https://drive.google.com/file/d/1DzPbRZGF2th5HliMz4HEepPHVaZLkkVh/view?usp=sharing" target="_blank" variant="danger" className="modal-btn-view" id="resume-btn" >View Resume <FaFilePdf /></Button>
+                    </div>
+                    <div className="col">
+                    <Button href="https://github.com/RSnodgrass92" target="_blank" variant="danger" className="modal-btn-view" id="resume-btn" >View GitHub <FaGithub /></Button>
                     </div>
                 </div>
 
