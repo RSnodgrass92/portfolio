@@ -45,7 +45,7 @@ new ProjectInfo(ccvid,
       </div>
     ).add()
 
-new ProjectInfo(ftvid,"This was a website that I built for a client that was looking to start their own clothing company. They needed their website to serve as a digital store front for their buisness.", "https://github.com/RSnodgrass92/fun-thoughts","https://funthoughts.netlify.app/",
+new ProjectInfo(ftvid,`This was a website that I built for a client that was looking to start their own clothing company. They needed their website to serve as a digital store front for their business. In order to access the My Account portion of the website I have set up a dummy account. To access this account enter "example@email.com" for the email address and "password" for the password when prompted.`, "https://github.com/RSnodgrass92/fun-thoughts","https://funthoughts.netlify.app/",
 
         <div className="container">
             <div className="row text-center">
