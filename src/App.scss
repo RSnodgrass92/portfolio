@@ -1,8 +1,11 @@
+html {
+    scroll-behavior: smooth;
+  }
 
 .main{
 // background: linear-gradient( #4286f4, #373B44); 
-background: linear-gradient( rgb(240, 240, 240), #7e7d7d);
-// background:rgb(207, 204, 204);
+
+background:rgb(224, 224, 224);
 font-size: 1.5em;  
 color: #dc3545;
 min-height: 100vh;
@@ -15,16 +18,11 @@ min-height: 100vh;
 }
 
 
-
 .modal-content{
     // background: #033252!important;
-    background: #3b3b3b!important;
+    background: #36454F!important;
     color: white;
-    
 }
-
-
-
 
 #modal-description
 {
@@ -50,8 +48,6 @@ min-height: 100vh;
         visibility:hidden;
     }
 }
-
-
 
 #modal-head{
     padding: 5px;
@@ -116,8 +112,55 @@ font-size: .7em;
 {
     font-size: 1em;
     margin-top: 20px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 #resume-btn{
     font-size: 22px;
+}
+
+.color-nav{
+    background: #36454F;
+    font-size: 25px;
+}
+
+
+.card-header{
+   &.contact-info-header{
+    background-color:#36454F;
+    color:rgb(219, 219, 219);
+   }
+    
+}
+
+.contact-link
+{
+    color:#dc3545;
+    font-size: .95em;
+    &:hover{
+        color:#36454F;
+    }
+}
+
+.card.text-center{
+    border:#dc3545 solid 2px;
+}
+
+#start-msg-topline{
+    margin-top: 120px;
+    font-size:60px;
+}
+#start-msg-topline-small{
+    margin-top: 120px;
+    font-size:40px;
+}
+
+#projects-msg-topline{
+    margin-top: 140px;
+}
+
+#projects-section{
+    margin-top: 100px;
 }

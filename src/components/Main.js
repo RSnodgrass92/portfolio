@@ -1,14 +1,13 @@
 import {ProjectCard} from "./ProjectCard"
 import {useState} from "react"
-import {Modal, Button} from "react-bootstrap"
-import {ModalBodyContent} from "./ModalBodyContent"
+import {Modal} from "react-bootstrap"
 import ccimg from "../assets/cc.PNG"
 import ftimg from "../assets/ftPNG.PNG"
 import wdwimg from "../assets/wdw.PNG"
 import {modalFiller} from "./Projects"
-import {FaFilePdf,FaGithub} from "react-icons/fa"
-
-
+import {NavBar} from "./Navbar"
+import {ContactCard} from "./ContactCard"
+import {FaArrowCircleDown} from "react-icons/fa"
 
 export function Main(props)
 {
@@ -22,45 +21,63 @@ export function Main(props)
     return (
         <>
         <div className="main">
-            <div className="container-fluid">
+            
+                <NavBar/>
+                <div className="container">
 
+                <div className="row d-none d-lg-block" id="start-msg-topline">
+                    <div className="col offset-2">
+                     <strong>Hello, I'm Ryan.</strong>
+                    </div>
+                </div>
+                <div className="row d-lg-none" id="start-msg-topline-small">
+                    <div className="col offset-2">
+                     <strong>Hello, I'm Ryan.</strong>
+                    </div>
+                </div>
                 <div className="row text-center">
                     <div className="col">
-                     HELLO, I'm Ryan, I Build things for the web
+                      I build things for the web
+                    </div>
+                </div>
+
+                <div className="row text-center" id="projects-msg-topline">
+                    <div className="col">
+                     Below are some of my <strong>recent projects.</strong> 
                     </div>
                 </div>
 
                 <div className="row text-center">
                     <div className="col">
-                     Check out my recent work
+                     <strong>Click</strong> the links to find out more <FaArrowCircleDown />
                     </div>
                 </div>
-
-                <div classname="row text-center">
-                    <div className="col">
-                    <Button href="https://drive.google.com/file/d/1DzPbRZGF2th5HliMz4HEepPHVaZLkkVh/view?usp=sharing" target="_blank" variant="danger" className="modal-btn-view" id="resume-btn" >View Resume <FaFilePdf /></Button>
-                    </div>
-                    <div className="col">
-                    <Button href="https://github.com/RSnodgrass92" target="_blank" variant="danger" className="modal-btn-view" id="resume-btn" >View GitHub <FaGithub /></Button>
-                    </div>
                 </div>
-
-                <div className="row text-center">
-                    
+                <div className="row text-center" id="projects-section">
                     <div className="col-12 col-xl-6">
-                        <h2 className="project-card-header-text">Fun Thoughts Clothing Co</h2>
+                        <h2 className="project-card-header-text" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Fun Thoughts Clothing Co.", modalContent:modalFiller[1]})}><strong>Fun Thoughts Clothing Co</strong></h2>
                         <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Fun Thoughts Clothing Co.", modalContent:modalFiller[1]})}><ProjectCard image={ftimg}/></div>
                     </div>
                     <div className="col-12 col-xl-6">
-                        <h2 className="project-card-header-text">Captured Creations Photography</h2>
+                        <h2 className="project-card-header-text"onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Captured Creations Photography", modalContent:modalFiller[0]})}><strong>Captured Creations Photography</strong></h2>
                         <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Captured Creations Photography", modalContent:modalFiller[0]})}><ProjectCard image={ccimg}/></div>
                     </div>
                     <div className="col-12 col-xl-6 offset-xl-3">
-                        <h2 className="project-card-header-text">Web Dev Wiki</h2>
+                        <h2 className="project-card-header-text" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Web Dev Wiki", modalContent:modalFiller[2]})}><strong>Web Dev Wiki</strong></h2>
                         <div className="cardHover" onClick={()=>setState({...state, isModalOpen: true, modalHeader:"Web Dev Wiki", modalContent:modalFiller[2]})}><ProjectCard image={wdwimg}/></div>
                     </div>
                 </div>
-            </div>
+
+
+                <div className="container">
+                    <div className="row mt-5">
+                        <div className="col" id="contactinfo">
+                        <ContactCard/>
+                        </div>
+                    </div>
+                </div>
+                    
+            
         </div>
 
         <Modal show={state.isModalOpen} centered size="xl">
