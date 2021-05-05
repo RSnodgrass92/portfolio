@@ -17,10 +17,10 @@ export function NavBar(props)
                     <Nav.Link href="#"></Nav.Link>
                   </Nav>
                   <Nav>
-                  <Nav.Link href="#contactinfo"><Button variant="danger" className="modal-btn-view" id="resume-btn" >Contact Me <RiMessage2Line/></Button></Nav.Link>
-                  <Nav.Link href="https://github.com/RSnodgrass92" target="_blank"><Button variant="danger" className="modal-btn-view" id="resume-btn" >View GitHub <FaGithub /></Button>
+                  <Nav.Link href="#contactinfo"><Button className="nav-btn" id="contact-btn" >Contact Me <RiMessage2Line/></Button></Nav.Link>
+                  <Nav.Link href="https://github.com/RSnodgrass92" target="_blank"><Button className="nav-btn" id="git-btn" >View GitHub <FaGithub /></Button>
                   </Nav.Link>
-                  <Nav.Link href="https://drive.google.com/file/d/1cFQ4EsbFm9qXQAezt62eXUA4Lq09iPeh/view?usp=sharing" target="_blank"><Button variant="danger" className="modal-btn-view" id="resume-btn" >View Resume <FaFilePdf /></Button></Nav.Link>
+                  <Nav.Link href="https://drive.google.com/file/d/1cFQ4EsbFm9qXQAezt62eXUA4Lq09iPeh/view?usp=sharing" target="_blank"><Button className="nav-btn" id="resume-btn" >View Resume <FaFilePdf /></Button></Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Navbar>

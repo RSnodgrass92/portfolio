@@ -1,13 +1,19 @@
+$main-color:rgb(224, 224, 224);
+$main-text-color:white; 
+$accent-color: #6610f2;
+$accent-shadow: #4b0bb3d3; 
+$scrollbar-hover:#570ecc; 
+$dark-color: #36454F;
+
+
 html {
     scroll-behavior: smooth;
   }
 
 .main{
-// background: linear-gradient( #4286f4, #373B44); 
-
-background:rgb(224, 224, 224);
+background:$main-color;
 font-size: 1.5em;  
-color: #dc3545;
+color: $accent-color ;
 min-height: 100vh;
 }
 
@@ -19,9 +25,8 @@ min-height: 100vh;
 
 
 .modal-content{
-    // background: #033252!important;
-    background: #36454F!important;
-    color: white;
+    background: $dark-color!important;
+    color: $main-text-color;
 }
 
 #modal-description
@@ -33,14 +38,14 @@ min-height: 100vh;
         width: auto;
     }
     &::-webkit-scrollbar-track{
-        background: rgb(207, 204, 204);
+        background: $main-color;
         border-radius: 25px;
     }
     &::-webkit-scrollbar-thumb{
-        background: #dc3545;
+        background: $accent-color;
         border-radius: 25px;
         &:hover{
-            background: #ba202f;
+            background: $scrollbar-hover;
         }
     }
 
@@ -51,18 +56,18 @@ min-height: 100vh;
 
 #modal-head{
     padding: 5px;
-    background: rgb(207, 204, 204);
-    color: #dc3545;
+    background: $main-color;
+    color: $accent-color;
 }
 
 
 .main-img-border{
-    border: #dc3545 3px solid;
+    border: $accent-color 3px solid;
 }
 
 .modal-video{
     width: 100%;
-    border: #dc3545 2px solid; 
+    border: $accent-color 2px solid; 
 }
 
 .section-title{
@@ -76,12 +81,35 @@ min-height: 100vh;
 }
 
 
-a.modal-btn-view.btn
+.nav-btn.btn-primary, .modal-btn-view.btn 
 {
-    &.btn-danger{
-        font-size: 1.2em;
+    font-size: 1.2em;
+    color: $main-text-color;
+    background-color: $accent-color;
+    border:none;
+    &:hover{
+        color:$main-text-color;
+        background-color: $accent-color;
+    }
+    &:active{
+        background-color: $accent-color!important;
+        box-shadow: 0 0 0 .2rem $accent-shadow!important;
+        &:focus{
+            background-color: $accent-color;
+        }
+    }
+    &:visited{
+        background-color: $accent-color;
+    }
+    &:focus{
+        box-shadow: 0 0 0 .2rem $accent-shadow;
+        background-color:$accent-color;
     }
 }
+
+.nav-btn.btn-primary{
+    font-size: .9em;
+    }
 
 #react-tooltip, #bootstrap-tooltip, #react-redux-tooltip, #react-router-tooltip, #html-tooltip, #sass-tooltip, #javascript-tooltip {
 font-size: .7em;
@@ -117,35 +145,31 @@ font-size: .7em;
     }
 }
 
-#resume-btn{
-    font-size: 22px;
-}
-
 .color-nav{
-    background: #36454F;
+    background: $dark-color;
     font-size: 25px;
 }
 
 
 .card-header{
    &.contact-info-header{
-    background-color:#36454F;
-    color:rgb(219, 219, 219);
+    background-color:$dark-color;
+    color:$main-text-color;
    }
     
 }
 
 .contact-link
 {
-    color:#dc3545;
+    color:$accent-color;
     font-size: .95em;
     &:hover{
-        color:#36454F;
+        color:$dark-color;
     }
 }
 
 .card.text-center{
-    border:#dc3545 solid 2px;
+    border:$accent-color solid 2px;
 }
 
 #start-msg-topline{
@@ -164,3 +188,4 @@ font-size: .7em;
 #projects-section{
     margin-top: 100px;
 }
+

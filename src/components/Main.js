@@ -94,7 +94,7 @@ export function Main(props)
                             <h2 className="modal-header-font-small">{state.modalHeader}</h2>
                         </div>
                         <div className="col-3 col-md-2">
-                        <button className="btn btn-danger" onClick={()=>setState({...state, isModalOpen: false})}>X</button>
+                        <button className="btn modal-btn-view" onClick={()=>setState({...state, isModalOpen: false})}>X</button>
                         </div>
                     </div>
                 </div>

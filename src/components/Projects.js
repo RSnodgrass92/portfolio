@@ -118,10 +118,10 @@ export const modalFiller= projectArr.map(index=> <ModalBodyContent videoSrc={ind
         </div>
         <div className="row my-2 text-center">
             {index.demoLink?  <div className="col-6">
-            <Button href={index.demoLink} target="_blank" variant="danger" className="modal-btn-view" >Demo <FaRegEye /></Button>
+            <Button href={index.demoLink} target="_blank"  className="modal-btn-view" >Demo <FaRegEye /></Button>
             </div>: <></>}
             {index.codeLink?<div className="col-6">
-            <Button href={index.codeLink} target="_blank" variant="danger" className="modal-btn-view">Code <FaCode /></Button>
+            <Button href={index.codeLink} target="_blank" className="modal-btn-view">Code <FaCode /></Button>
             </div>:<></>
             }
         </div>
